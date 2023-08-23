@@ -23,6 +23,10 @@ html, body {
   height: 100%;
 }
 
+html {
+  min-width: 514px;
+}
+
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section { 
     display:block;
@@ -48,7 +52,7 @@ footer,header,hgroup,menu,nav,section {
 /* fsdfkal */
 
 #header {
-  background-color: aliceblue;
+  background-color: rgb(136, 191, 240);
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -74,11 +78,21 @@ footer,header,hgroup,menu,nav,section {
   margin: auto;
 }
 
+#options a:visited {
+  color: black;
+}
+
+#options a:hover {
+  color: goldenrod;
+}
+
 #body {
   font-family: 'MyBodyFont';
-  height: 85vh;
+  height: 82vh;
   width: 100vw;
   position: relative;
+  background-color: antiquewhite;
+  z-index: -2;
 }
 
 #background-image {
@@ -88,18 +102,33 @@ footer,header,hgroup,menu,nav,section {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.8;
+  opacity: 0.75;
   position: absolute; 
   z-index: -1;
 }
 
 #place-info {
-  height: 100%;
-  padding: 0 130px;
+  align-items: center;
+  
   display: flex;
   flex-direction: column;
+  font-size: 37px;
   justify-content: center;
-  align-items: center;
-  font-size: 42px;
+  height: 100%;
+  padding: 0 130px;  
   text-align: center;
+}
+
+#place-info p:first-child {
+  font-size: 55px;
+  margin-bottom: 30px;
+}
+
+#place-info p:nth-child(2) {
+  margin-top: 30px;
+}
+
+#footer {
+  height: 8vh;
+  background-color: rgb(194, 255, 132);
 }
