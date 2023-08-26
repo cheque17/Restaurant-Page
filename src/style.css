@@ -78,6 +78,19 @@ footer,header,hgroup,menu,nav,section {
   margin: auto;
 }
 
+/*
+.option-1,
+.option-2,
+.option-3 {
+  height: 10vh;
+  width: 150px;
+  background-color: rgb(49, 240, 214);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
+
 a:visited {
   color: black;
 }
