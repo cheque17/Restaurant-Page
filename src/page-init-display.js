@@ -2,10 +2,6 @@ const contentContainer = document.querySelector('#content');
 console.dir(contentContainer);
 
 
-/*Function to create new elements and function to append them
-
-
-
 /*Header Creation*/
 const header = document.createElement('div');
 header.setAttribute('id', 'header')
@@ -24,7 +20,6 @@ header.appendChild(options);
 const option1 = document.createElement('div');
 option1.setAttribute('class', 'option-1');
 const menu = document.createElement('a');
-menu.setAttribute('href', 'https://bostons.com.mx/menu');
 menu.innerText = 'Menu';
 option1.appendChild(menu);
 options.appendChild(option1);
@@ -57,7 +52,7 @@ body.appendChild(background);
 
 const infoPlace = document.createElement('div');
 infoPlace.setAttribute('id', 'place-info');
-body.appendChild(infoPlace);
+body.appendChild(infoPlace);//important
 
 const bigPart = document.createElement('p');
 bigPart.setAttribute('class', 'part big');
