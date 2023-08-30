@@ -5,17 +5,23 @@ import tacosAsada from './tacos-de-asada.jpg';
 import totopos from './totopos.jpg';
 import variety from './variety-tacos.jpg';
 
-export function testFunks () {
-  console.log('It\'s alive!!!');
+export function testFunks (parentSelector, removedSelector) {
+  const body = document.querySelector(`${parentSelector}`);
+  const placeInfo = document.querySelector(`${removedSelector}`);
+  body.removeChild(placeInfo)
 }
 
 export function displayMenu () {
   const menuContent = document.createElement('div');
+  menuContent.setAttribute('id', 'menu-content');
+  const body = document.querySelector('#body');
+  body.appendChild(menuContent)
 
   //Menu items
 
   const item1Card = document.createElement('div');
   item1Card.setAttribute('class', 'menu item');
+  menuContent.appendChild(item1Card);
 
   const beefImg = new Image();
   beefImg.src = beefBroth;
@@ -28,6 +34,7 @@ export function displayMenu () {
 //--------------------------
   const item2Card = document.createElement('div');
   item2Card.setAttribute('class', 'menu item');
+  menuContent.appendChild(item2Card);
 
   const flautasImg = new Image();
   flautasImg.src = flautas;
@@ -39,7 +46,8 @@ export function displayMenu () {
   
 //--------------------------
   const item3Card = document.createElement('div');
-  item3Card.setAttribute('class', 'menu item')
+  item3Card.setAttribute('class', 'menu item');
+  menuContent.appendChild(item3Card)
 
   const pozoleImg = new Image();
   pozoleImg.src = pozole;
@@ -51,7 +59,8 @@ export function displayMenu () {
 
 //-------------------------
   const item4Card = document.createElement('div');
-  item4Card.setAttribute('class', 'menu item')
+  item4Card.setAttribute('class', 'menu item');
+  menuContent.appendChild(item4Card)
 
   const asadaTacosImg = new Image();
   asadaTacosImg.src = tacosAsada;
@@ -63,7 +72,8 @@ export function displayMenu () {
 
 //-------------------------  
   const item5Card = document.createElement('div');
-  item5Card.setAttribute('class', 'menu item')
+  item5Card.setAttribute('class', 'menu item');
+  menuContent.appendChild(item5Card)
 
   const totoposImg = new Image();
   totoposImg.src = totopos;
@@ -76,12 +86,13 @@ export function displayMenu () {
 //-----------------------
   const item6Card = document.createElement('div');
   item6Card.setAttribute('class', 'menu item');
+  menuContent.appendChild(item6Card);
 
   const varietyImg = new Image();
   varietyImg.src = variety;
-  item6Card.appendChild(variety);
+  item6Card.appendChild(varietyImg);
 
   const name6 = document.createElement('p');
   name6.innerText = 'Variety of tacos';
-  item6Card.appendChild(name6)
+  item6Card.appendChild(name6);
 }

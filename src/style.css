@@ -179,3 +179,28 @@ a:visited {
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+/*Menu styling*/
+
+#menu-content {
+  width: 70%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+#body #menu-content .menu.item {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#body #menu-content .menu.item img {
+  height: 70px;
+  width: 100%;
+  object-fit: contain;
+}

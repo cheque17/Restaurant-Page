@@ -8,12 +8,15 @@ import { displayMenu, testFunks } from './menu';
 
 console.log('Today is: ' + new Date());
 
-testFunks();
 
 const option1 = document.querySelector('.option-1');
-
 option1.addEventListener('click', ()=> {
   displayMenu();
+})
+
+const option2 = document.querySelector('.option-2');
+option2.addEventListener('click', ()=>{
+  testFunks('#content', '#footer');
 })
 
 
