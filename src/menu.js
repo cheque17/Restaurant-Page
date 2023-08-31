@@ -27,7 +27,8 @@ export function displayMenu () {
   beefImg.src = beefBroth;
   item1Card.appendChild(beefImg);
 
-  const name1 = document.createElement('p');
+  const name1 = document.createElement('a');
+  name1.setAttribute('href', 'https://unsplash.com/photos/3d5RQY3JuDc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText');
   name1.innerText = 'Beef broth';
   item1Card.appendChild(name1);
 
@@ -40,7 +41,8 @@ export function displayMenu () {
   flautasImg.src = flautas;
   item2Card.appendChild(flautasImg);
 
-  const name2 = document.createElement('p');
+  const name2 = document.createElement('a');  
+  name2.setAttribute('href', 'https://unsplash.com/photos/i6TWLN0vUQ8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText');
   name2.innerText = 'Flautas';
   item2Card.appendChild(name2);
   
@@ -53,8 +55,9 @@ export function displayMenu () {
   pozoleImg.src = pozole;
   item3Card.appendChild(pozoleImg);
 
-  const name3 = document.createElement('p');
-  name3.innerText - 'Pozole';
+  const name3 = document.createElement('a');
+  name3.setAttribute('href', 'https://unsplash.com/photos/pAU112ZIXvU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText');
+  name3.innerText = 'Pozole';
   item3Card.appendChild(name3);
 
 //-------------------------
@@ -66,7 +69,8 @@ export function displayMenu () {
   asadaTacosImg.src = tacosAsada;
   item4Card.appendChild(asadaTacosImg);
 
-  const name4 = document.createElement('p');
+  const name4 = document.createElement('a');
+  name4.setAttribute('href', 'https://unsplash.com/photos/2qoYTR6Yym8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText');
   name4.innerText = 'Asada Tacos';
   item4Card.appendChild(name4);
 
@@ -79,7 +83,8 @@ export function displayMenu () {
   totoposImg.src = totopos;
   item5Card.appendChild(totoposImg);
 
-  const name5 = document.createElement('p');
+  const name5 = document.createElement('a');
+  name5.setAttribute('href', 'https://unsplash.com/photos/3bJ76UZtQdQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText');
   name5.innerText = 'Totopo';
   item5Card.appendChild(name5);
 
@@ -93,6 +98,7 @@ export function displayMenu () {
   item6Card.appendChild(varietyImg);
 
   const name6 = document.createElement('p');
-  name6.innerText = 'Variety of tacos';
+  /*name6.setAttribute('href', 'https://unsplash.com/photos/bA3VwdUYduY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText');*/
+  name6.innerHTML = '<a href=\'https://unsplash.com/photos/bA3VwdUYduY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\'>Variety of tacos</a>';
   item6Card.appendChild(name6);
 }

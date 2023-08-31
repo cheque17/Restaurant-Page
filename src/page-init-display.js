@@ -46,10 +46,6 @@ body.setAttribute('id', 'body');
 contentContainer.appendChild(body);
 
 //Body details
-const background = document.createElement('div');
-background.setAttribute('id', 'background-image');
-body.appendChild(background);
-
 const infoPlace = document.createElement('div');
 infoPlace.setAttribute('id', 'place-info');
 body.appendChild(infoPlace);//important
