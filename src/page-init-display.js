@@ -1,6 +1,4 @@
 const contentContainer = document.querySelector('#content');
-console.dir(contentContainer);
-
 
 /*Header Creation*/
 const header = document.createElement('div');

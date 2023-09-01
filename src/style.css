@@ -206,3 +206,12 @@ a:visited {
   width: 90%;
   object-fit: cover;
 }
+
+/*Contact styling*/
+
+#contact-info {
+  height: 80%;
+  width: 80%;
+  background-color: antiquewhite;
+  
+}

@@ -22,9 +22,15 @@ option2.addEventListener('click', ()=>{
   testFunks('#body', '#place-info');
 })
 
+
+let contactDisplayed = 0;
 const option3 = document.querySelector('.option-3');
 option3.addEventListener('click', ()=>{
+  if (contactDisplayed) {
+    return
+  }
   displayContact();
+  contactDisplayed = contactDisplayed === 0 ? 1 : 0;
 })
 
 
