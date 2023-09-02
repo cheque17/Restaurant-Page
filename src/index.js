@@ -8,12 +8,12 @@ import { displayAbout } from './about';
 console.log('Today is: ' + new Date());
 
 let menuDisplayed = 0;
-
 const option1 = document.querySelector('.option-1');
 option1.addEventListener('click', ()=> {
   if (menuDisplayed) {
     return
   }
+  testFunks('#body', '#place-info');
   displayMenu();
   menuDisplayed = menuDisplayed === 0 ? 1 : 0;
 })
@@ -37,6 +37,7 @@ option3.addEventListener('click', ()=>{
   if (contactDisplayed) {
     return
   }
+  testFunks('#body', '#place-info');
   displayContact();
   contactDisplayed = contactDisplayed === 0 ? 1 : 0;
 })

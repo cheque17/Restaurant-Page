@@ -232,3 +232,18 @@ footer,header,hgroup,menu,nav,section {
   padding-bottom: 10px;
   font-size: 25px;
 }
+
+/*About styling*/
+
+#body #about-container {
+  width: 50%;
+  height: 80%;
+  background-color: antiquewhite;
+  box-sizing: border-box;
+  padding: 40px 20px 50px;
+}
+
+#body #about-container h1 {
+  font-size: 35px;
+  text-align: center;
+}
