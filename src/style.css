@@ -240,10 +240,20 @@ footer,header,hgroup,menu,nav,section {
   height: 80%;
   background-color: antiquewhite;
   box-sizing: border-box;
-  padding: 40px 20px 50px;
+  padding: 40px 25px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #body #about-container h1 {
-  font-size: 35px;
+  font-size: 45px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+#body #about-container #info-container {
+  word-spacing: 3px;
+  text-align: justify;
+  line-height: 1.3;
 }
