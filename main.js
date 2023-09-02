@@ -130,6 +130,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/about.js":
+/*!**********************!*\
+  !*** ./src/about.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   displayAbout: () => (/* binding */ displayAbout)\n/* harmony export */ });\nfunction displayAbout() {\n  console.log('Getting the job done!');\n}\n\n//# sourceURL=webpack://restaurant-page/./src/about.js?");
+
+/***/ }),
+
 /***/ "./src/contact.js":
 /*!************************!*\
   !*** ./src/contact.js ***!
@@ -148,7 +159,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _page_init_display__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./page-init-display */ \"./src/page-init-display.js\");\n/* harmony import */ var _page_init_display__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_page_init_display__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact */ \"./src/contact.js\");\n\n\n\n\n\n\nconsole.log('Today is: ' + new Date());\n\nlet menuDisplayed = 0;\n\nconst option1 = document.querySelector('.option-1');\noption1.addEventListener('click', ()=> {\n  if (menuDisplayed) {\n    return\n  }\n  (0,_menu__WEBPACK_IMPORTED_MODULE_2__.displayMenu)();\n  menuDisplayed = menuDisplayed === 0 ? 1 : 0;\n})\n\nconst option2 = document.querySelector('.option-2');\noption2.addEventListener('click', ()=>{\n  (0,_menu__WEBPACK_IMPORTED_MODULE_2__.testFunks)('#body', '#place-info');\n})\n\n\nlet contactDisplayed = 0;\nconst option3 = document.querySelector('.option-3');\noption3.addEventListener('click', ()=>{\n  if (contactDisplayed) {\n    return\n  }\n  (0,_contact__WEBPACK_IMPORTED_MODULE_3__.displayContact)();\n  contactDisplayed = contactDisplayed === 0 ? 1 : 0;\n})\n\n\n/*const myIcon = new Image();\n  myIcon.src = Icon;\n\n  element.appendChild(myIcon);*/\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _page_init_display__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./page-init-display */ \"./src/page-init-display.js\");\n/* harmony import */ var _page_init_display__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_page_init_display__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact */ \"./src/contact.js\");\n/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./about */ \"./src/about.js\");\n\n\n\n\n\n\n\nconsole.log('Today is: ' + new Date());\n\nlet menuDisplayed = 0;\n\nconst option1 = document.querySelector('.option-1');\noption1.addEventListener('click', ()=> {\n  if (menuDisplayed) {\n    return\n  }\n  (0,_menu__WEBPACK_IMPORTED_MODULE_2__.displayMenu)();\n  menuDisplayed = menuDisplayed === 0 ? 1 : 0;\n})\n\n\nlet aboutDisplayed = 0;\nconst option2 = document.querySelector('.option-2');\noption2.addEventListener('click', ()=>{\n  if (aboutDisplayed) {\n    return\n  }\n  (0,_menu__WEBPACK_IMPORTED_MODULE_2__.testFunks)('#body', '#place-info');\n  (0,_about__WEBPACK_IMPORTED_MODULE_4__.displayAbout)();\n  aboutDisplayed = aboutDisplayed === 0 ? 1 : 0;\n})\n\n\nlet contactDisplayed = 0;\nconst option3 = document.querySelector('.option-3');\noption3.addEventListener('click', ()=>{\n  if (contactDisplayed) {\n    return\n  }\n  (0,_contact__WEBPACK_IMPORTED_MODULE_3__.displayContact)();\n  contactDisplayed = contactDisplayed === 0 ? 1 : 0;\n})\n\n\n/*const myIcon = new Image();\n  myIcon.src = Icon;\n\n  element.appendChild(myIcon);*/\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ }),
 
