@@ -91,9 +91,7 @@ footer,header,hgroup,menu,nav,section {
 }
 */
 
-a:visited {
-  color: black;
-}
+
 
 #options a:hover {
   color: rgb(141, 116, 5);
@@ -211,7 +209,26 @@ a:visited {
 
 #contact-info {
   height: 80%;
-  width: 80%;
+  width: 50%;
   background-color: antiquewhite;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#contact-info h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+#contact-info div:nth-child(-n+3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-info div h2 {
+  padding-bottom: 10px;
+  font-size: 25px;
 }

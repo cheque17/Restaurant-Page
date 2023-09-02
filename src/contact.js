@@ -36,9 +36,18 @@ export function displayContact (){
   criticsNumber.innerText = 'generic_restaurant17@genericservice.com'
   criticsContainer.appendChild(criticsNumber);
 
-  const subscribe = document.createElement('h2');
-  subscribe.innerText = 'Please, make sure to subscribe to our weekly news later';
-
+  const subscriptionContainer = document.createElement('div');
+  subscriptionContainer.setAttribute('id', 'suscription-container');
+  contactInfo.appendChild(subscriptionContainer);
   
+  const subscribe = document.createElement('p');
+  subscribe.innerText = 'Please, make sure to subscribe to our weekly news letter ';
+  subscriptionContainer.appendChild(subscribe);
+
+  const suscriptionLink = document.createElement('a');
+  suscriptionLink.setAttribute('href', 'https://www.theodinproject.com/dashboard');
+  suscriptionLink.innerText = 'here.';
+  subscribe.appendChild(suscriptionLink);
+
 }
 
