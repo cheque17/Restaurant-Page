@@ -2,6 +2,7 @@ import './style.css';
 import './page-init-display';
 import { displayMenu, testFunks } from './menu';
 import { displayContact } from './contact';
+import { displayAbout } from './about';
 
 
 console.log('Today is: ' + new Date());
@@ -17,9 +18,16 @@ option1.addEventListener('click', ()=> {
   menuDisplayed = menuDisplayed === 0 ? 1 : 0;
 })
 
+
+let aboutDisplayed = 0;
 const option2 = document.querySelector('.option-2');
 option2.addEventListener('click', ()=>{
+  if (aboutDisplayed) {
+    return
+  }
   testFunks('#body', '#place-info');
+  displayAbout();
+  aboutDisplayed = aboutDisplayed === 0 ? 1 : 0;
 })
 
 
