@@ -8,12 +8,15 @@ import { displayAbout } from './about';
 console.log('Today is: ' + new Date());
 
 const tabBrowsing = (() => {
-  let _menuDisplayed = 0;
-  let _aboutDisplayed = 0;
-  let _contactDisplayed = 0;
 
-  const _remover = (parentSelector, removedSelector) => {
-    const body = document.querySelector(`${parentSelector}`);
+  let contents = {
+    _menuDisplayed : 0,
+    _aboutDisplayed : 0,
+    _contactDisplayed: 0,
+  }
+
+  const _remover = (removedSelector) => {
+    const body = document.querySelector('#body');
     const placeInfo = document.querySelector(`${removedSelector}`);
     body.removeChild(placeInfo)
   }
@@ -21,12 +24,13 @@ const tabBrowsing = (() => {
 
   const option1 = document.querySelector('.option-1');
   option1.addEventListener('click', ()=> {
-  if (_menuDisplayed) {
+  if (contents._menuDisplayed) {
     return
   }
-  _remover('#body', '#place-info');
+  _remover('#place-info');
   displayMenu();
-  _menuDisplayed = _menuDisplayed === 0 ? 1 : 0;
+  contents._menuDisplayed = contents._menuDisplayed === 0 ? 1 : 0;
+  console.log(contents);
 })
 
 
@@ -34,6 +38,10 @@ const tabBrowsing = (() => {
   restName.addEventListener('click', ()=>{
     console.log('I do work');
   })
+
+  /*return {
+    contents: contents,
+  }*/
 })();
 
 
