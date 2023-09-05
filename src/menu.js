@@ -5,11 +5,7 @@ import tacosAsada from './tacos-de-asada.jpg';
 import totopos from './totopos.jpg';
 import variety from './variety-tacos.jpg';
 
-export function testFunks (parentSelector, removedSelector) {
-  const body = document.querySelector(`${parentSelector}`);
-  const placeInfo = document.querySelector(`${removedSelector}`);
-  body.removeChild(placeInfo)
-}
+
 
 export function displayMenu () {
   const menuContent = document.createElement('div');

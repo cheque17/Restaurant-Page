@@ -1,11 +1,24 @@
 import './style.css';
 import './page-init-display';
-import { displayMenu, testFunks } from './menu';
+import { displayMenu } from './menu';
 import { displayContact } from './contact';
 import { displayAbout } from './about';
 
 
 console.log('Today is: ' + new Date());
+
+const tabBrowsing = (() => {
+  let _menuDisplayed = 0;
+
+  
+})();
+
+function testFunks (parentSelector, removedSelector) {
+  const body = document.querySelector(`${parentSelector}`);
+  const placeInfo = document.querySelector(`${removedSelector}`);
+  body.removeChild(placeInfo)
+}
+
 
 let menuDisplayed = 0;
 const option1 = document.querySelector('.option-1');

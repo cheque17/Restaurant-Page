@@ -240,7 +240,7 @@ footer,header,hgroup,menu,nav,section {
   height: 80%;
   background-color: antiquewhite;
   box-sizing: border-box;
-  padding: 40px 25px 60px;
+  padding: 40px 35px 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
