@@ -9,30 +9,40 @@ console.log('Today is: ' + new Date());
 
 const tabBrowsing = (() => {
   let _menuDisplayed = 0;
+  let _aboutDisplayed = 0;
+  let _contactDisplayed = 0;
 
-  
-})();
-
-function testFunks (parentSelector, removedSelector) {
-  const body = document.querySelector(`${parentSelector}`);
-  const placeInfo = document.querySelector(`${removedSelector}`);
-  body.removeChild(placeInfo)
-}
+  const _remover = (parentSelector, removedSelector) => {
+    const body = document.querySelector(`${parentSelector}`);
+    const placeInfo = document.querySelector(`${removedSelector}`);
+    body.removeChild(placeInfo)
+  }
 
 
-let menuDisplayed = 0;
-const option1 = document.querySelector('.option-1');
-option1.addEventListener('click', ()=> {
-  if (menuDisplayed) {
+  const option1 = document.querySelector('.option-1');
+  option1.addEventListener('click', ()=> {
+  if (_menuDisplayed) {
     return
   }
-  testFunks('#body', '#place-info');
+  _remover('#body', '#place-info');
   displayMenu();
-  menuDisplayed = menuDisplayed === 0 ? 1 : 0;
+  _menuDisplayed = _menuDisplayed === 0 ? 1 : 0;
 })
 
 
-let aboutDisplayed = 0;
+  let restName = document.querySelector('#restaurant-name');
+  restName.addEventListener('click', ()=>{
+    console.log('I do work');
+  })
+})();
+
+
+
+
+
+
+
+
 const option2 = document.querySelector('.option-2');
 option2.addEventListener('click', ()=>{
   if (aboutDisplayed) {
@@ -44,7 +54,7 @@ option2.addEventListener('click', ()=>{
 })
 
 
-let contactDisplayed = 0;
+
 const option3 = document.querySelector('.option-3');
 option3.addEventListener('click', ()=>{
   if (contactDisplayed) {
