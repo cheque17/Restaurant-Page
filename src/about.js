@@ -1,5 +1,4 @@
 export function displayAbout() {
-  console.log('Getting the job done!');
 
   const body = document.querySelector('#body');
 

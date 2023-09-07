@@ -1,5 +1,4 @@
 export function displayContact (){
-  console.log('I\'m working');
 
   const body = document.querySelector('#body');
   const contactInfo = document.createElement('div');
