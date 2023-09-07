@@ -21,6 +21,16 @@ const tabBrowsing = (() => {
     body.removeChild(placeInfo)
   }
 
+    
+  const examiner = function() {
+    for (let property in contents) {
+      if (contents[property] == 1){
+        console.log(property);
+        contents[property] = 0;
+      }
+    }
+  }
+ 
 
   const option1 = document.querySelector('.option-1');
   option1.addEventListener('click', ()=> {
@@ -31,6 +41,7 @@ const tabBrowsing = (() => {
   displayMenu();
   contents._menuDisplayed = contents._menuDisplayed === 0 ? 1 : 0;
   console.log(contents);
+  examiner();
 })
 
 
