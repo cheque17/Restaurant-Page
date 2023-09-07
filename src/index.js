@@ -20,7 +20,7 @@ const tabBrowsing = (() => {
     _pageInit: '#place-info',
     _menuDisplayed : '#menu-content',
     _aboutDisplayed : '#about-container',
-    _contactDisplayed : '#reservations-container',
+    _contactDisplayed : '#contact-info',
   }
 
   const _remover = (removedSelector) => {
