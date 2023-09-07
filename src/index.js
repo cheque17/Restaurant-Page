@@ -9,24 +9,33 @@ console.log('Today is: ' + new Date());
 
 const tabBrowsing = (() => {
 
-  let contents = {
+  const contentStatus = {
+    _pageInit : 1,
     _menuDisplayed : 0,
     _aboutDisplayed : 0,
     _contactDisplayed: 0,
   }
 
+  const contentsSelectors = {
+    _pageInit: '#place-info',
+    _menuDisplayed : '#menu-content',
+    _aboutDisplayed : '#about-container',
+    _contactDisplayed : '#reservations-container',
+  }
+
   const _remover = (removedSelector) => {
     const body = document.querySelector('#body');
-    const placeInfo = document.querySelector(`${removedSelector}`);
+    const placeInfo = document.querySelector(`${contentsSelectors[removedSelector]}`);
     body.removeChild(placeInfo)
   }
 
     
   const examiner = function() {
-    for (let property in contents) {
-      if (contents[property] == 1){
+    for (let property in contentStatus) {
+      if (contentStatus[property] == 1){
         console.log(property);
-        contents[property] = 0;
+        contentStatus[property] = 0;
+        return (property);
       }
     }
   }
@@ -34,15 +43,38 @@ const tabBrowsing = (() => {
 
   const option1 = document.querySelector('.option-1');
   option1.addEventListener('click', ()=> {
-  if (contents._menuDisplayed) {
+  if (contentStatus._menuDisplayed) {
     return
   }
-  _remover('#place-info');
+  _remover(examiner());
   displayMenu();
-  contents._menuDisplayed = contents._menuDisplayed === 0 ? 1 : 0;
-  console.log(contents);
-  examiner();
-})
+  contentStatus._menuDisplayed = contentStatus._menuDisplayed === 0 ? 1 : 0;
+  console.log(contentStatus);
+  })
+
+
+  const option2 = document.querySelector('.option-2');
+  option2.addEventListener('click', ()=>{
+    if (contentStatus._aboutDisplayed) {
+      return
+    }
+    _remover(examiner());
+    displayAbout();
+    contentStatus._aboutDisplayed = contentStatus._aboutDisplayed === 0 ? 1 : 0;
+    console.log(contentStatus);
+  })
+
+
+  const option3 = document.querySelector('.option-3');
+  option3.addEventListener('click', ()=>{
+    if (contentStatus._contactDisplayed) {
+      return
+    }
+    _remover(examiner());
+    displayContact();
+    contentStatus._contactDisplayed = contentStatus._contactDisplayed === 0 ? 1 : 0;
+    console.log(contentStatus);
+  })
 
 
   let restName = document.querySelector('#restaurant-name');
@@ -62,27 +94,11 @@ const tabBrowsing = (() => {
 
 
 
-const option2 = document.querySelector('.option-2');
-option2.addEventListener('click', ()=>{
-  if (aboutDisplayed) {
-    return
-  }
-  testFunks('#body', '#place-info');
-  displayAbout();
-  aboutDisplayed = aboutDisplayed === 0 ? 1 : 0;
-})
 
 
 
-const option3 = document.querySelector('.option-3');
-option3.addEventListener('click', ()=>{
-  if (contactDisplayed) {
-    return
-  }
-  testFunks('#body', '#place-info');
-  displayContact();
-  contactDisplayed = contactDisplayed === 0 ? 1 : 0;
-})
+
+
 
 
 /*const myIcon = new Image();
