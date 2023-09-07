@@ -49,7 +49,6 @@ contentContainer.appendChild(body);
 
 displayPlace()
 
-
 //Footer creation
 const footer = document.createElement('div');
 footer.setAttribute('id', 'footer');

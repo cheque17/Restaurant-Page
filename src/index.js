@@ -44,13 +44,12 @@ const tabBrowsing = (() => {
 
   const option1 = document.querySelector('.option-1');
   option1.addEventListener('click', ()=> {
-  if (contentStatus._menuDisplayed) {
-    return
-  }
-  _remover(examiner());
-  displayMenu();
-  contentStatus._menuDisplayed = contentStatus._menuDisplayed === 0 ? 1 : 0;
-  console.log(contentStatus);
+    if (contentStatus._menuDisplayed) {
+      return
+    }
+    _remover(examiner());
+    displayMenu();
+    contentStatus._menuDisplayed = contentStatus._menuDisplayed === 0 ? 1 : 0;
   })
 
 
@@ -61,8 +60,7 @@ const tabBrowsing = (() => {
     }
     _remover(examiner());
     displayAbout();
-    contentStatus._aboutDisplayed = contentStatus._aboutDisplayed === 0 ? 1 : 0;
-    console.log(contentStatus);
+    contentStatus._aboutDisplayed = contentStatus._aboutDisplayed === 0 ? 1 : 0;    
   })
 
 
@@ -74,7 +72,6 @@ const tabBrowsing = (() => {
     _remover(examiner());
     displayContact();
     contentStatus._contactDisplayed = contentStatus._contactDisplayed === 0 ? 1 : 0;
-    console.log(contentStatus);
   })
 
 
@@ -86,12 +83,8 @@ const tabBrowsing = (() => {
     _remover(examiner());
     displayPlace();
     contentStatus._pageInit = contentStatus._pageInit === 0 ? 1 : 0;
-    console.log(contentStatus);
   })
 
-  /*return {
-    contents: contents,
-  }*/
 })();
 
 
