@@ -86,22 +86,3 @@ const tabBrowsing = (() => {
   })
 
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*const myIcon = new Image();
-  myIcon.src = Icon;
-
-  element.appendChild(myIcon);*/
