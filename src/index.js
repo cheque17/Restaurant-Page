@@ -3,6 +3,7 @@ import './page-init-display';
 import { displayMenu } from './menu';
 import { displayContact } from './contact';
 import { displayAbout } from './about';
+import { displayPlace } from './place';
 
 
 console.log('Today is: ' + new Date());
@@ -79,7 +80,13 @@ const tabBrowsing = (() => {
 
   let restName = document.querySelector('#restaurant-name');
   restName.addEventListener('click', ()=>{
-    console.log('I do work');
+    if (contentStatus._pageInit) {
+      return
+    }
+    _remover(examiner());
+    displayPlace();
+    contentStatus._pageInit = contentStatus._pageInit === 0 ? 1 : 0;
+    console.log(contentStatus);
   })
 
   /*return {
